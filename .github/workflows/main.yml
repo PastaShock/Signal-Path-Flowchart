@@ -1,0 +1,18 @@
+name: Action!
+run-name: ${{ github.actor }} is updating the files! 🚀
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-slim
+    name: Build job
+    steps:
+      - name: SharePoint uploader
+        uses: su-dont/share-point-uploader@v2.1
+        with:
+          sp_url: https://lifeofvictory.sharepoint.com/:f:/r/sites/MediaTeam/
+          sp_username: georgepastushok@lifeofvictory.org
+          sp_password: ${{ secrets.PASSWORD }}
+          sp_folder: /Sites/Media Team/Documents/ZZ_site_assets/
+          sp_file_name: church-signal-flow.svg
+          file: church-signla-flow.svg
