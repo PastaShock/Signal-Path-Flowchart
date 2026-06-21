@@ -9,11 +9,8 @@ jobs:
     name: Build job
     
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2.3.4
-
-      - name: SharePoint uploader
-        uses: su-dont/share-point-uploader@v2.1
+      - name: SharePoint Uploader
+        uses: krzysztofhamerski/share-point-uploader@v2.1
         with:
           sp_url: https://lifeofvictory.sharepoint.com/:f:/r/sites/MediaTeam/
           sp_username: georgepastushok@lifeofvictory.org
